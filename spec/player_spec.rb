@@ -1,8 +1,13 @@
 require 'player'
+
 describe Player do
-  describe "#get_player_name" do
-    it "return the name of the player"do 
-      expect(subject.get_player_name.is_a?(String)).to be true
+  let(:player) {Player.new("Player")}
+  let(:player2) {Player.new("Player2")}
+
+  describe "#name" do
+    it "return the name of the player" do
+      expect(player.name.is_a?(String)).to be true
     end
   end
+
 end
