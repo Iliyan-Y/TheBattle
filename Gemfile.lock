@@ -53,8 +53,9 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  rack (~> 2.2)
   rspec
   sinatra
 
 BUNDLED WITH
-   2.1.2
+   2.1.4
