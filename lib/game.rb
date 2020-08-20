@@ -9,6 +9,7 @@ class Game
 
   def attack(target)
     target.get_damage
+    turn_switcher
   end
 
   def player1

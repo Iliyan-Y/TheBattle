@@ -3,6 +3,6 @@ feature "Switching turns" do
     fill_n_submit
     click_button "Attack" 
     click_link "Ok"
-    expect(page).to have_content "Kiwi Turn:"
+    expect(page).to have_content "Kiwi turn:"
   end
 end
