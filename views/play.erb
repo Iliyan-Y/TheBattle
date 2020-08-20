@@ -1,7 +1,7 @@
 <p><%= @game.player1.name %> vs <%= @game.player2.name %></p>
 <p> <%= @game.player1.name %> HP:<%=@game.player1.hp%> </p>
 <p> <%= @game.player2.name %> HP:<%=@game.player2.hp%> </p>
-<p><%=@game.turn.name%> turn:</p>
+<p><%=@game.turn_to_attack.name%> turn:</p>
 <form action='/attack'>
 <button type=submit >Attack</button> 
 </form>

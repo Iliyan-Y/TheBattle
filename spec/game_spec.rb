@@ -19,10 +19,15 @@ describe Game do
   end
 
   describe "#turn_switcher" do 
-    it "gives the role to the next player" do
+    it "gives the role of attacker to the next player" do
        game.turn_switcher
-       expect(game.turn).to eq player2
+       expect(game.turn_to_attack).to eq player2
     end
+
+    it "gives the role of defend to the next player" do
+      game.turn_switcher
+      expect(game.turn_to_defend).to eq "player1"
+   end
   end
   
 end
