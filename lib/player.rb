@@ -13,5 +13,4 @@ class Player
     @hp -= DEFAULT_DMG
   end
 
-
 end

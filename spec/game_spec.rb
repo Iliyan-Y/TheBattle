@@ -20,7 +20,8 @@ describe Game do
 
   describe "#turn_switcher" do 
     it "gives the role to the next player" do
-       expect(game.turn_switcher).to eq player2
+       game.turn_switcher
+       expect(game.turn).to eq player2
     end
   end
   
