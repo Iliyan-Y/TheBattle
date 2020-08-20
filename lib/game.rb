@@ -1,15 +1,15 @@
 class Game
 
-  attr_reader :players, :turn_to_attack
+  attr_reader :players, :turn_to_attack, :turn_to_defend
 
   def initialize(player1, player2)
     @players = [player1,player2]
     @turn_to_attack = player1
+    @turn_to_defend = player2
   end
 
   def attack(target)
     target.get_damage
-    turn_switcher
   end
 
   def player1
@@ -23,8 +23,10 @@ class Game
   def turn_switcher
      if @turn_to_attack == player1
         @turn_to_attack = player2
+        @turn_to_defend = player1
      else
-        @turn_to_attack = player2
+        @turn_to_attack = player1
+        @turn_to_defend = player2
      end
   end
   

@@ -24,9 +24,15 @@ class Battle < Sinatra::Base
 
     get '/attack' do 
       @game=$game
-      @game.attack(@game.player2)
+      @game.attack(@game.turn_to_defend)
       erb :attack
     end
+
+    get '/switch' do
+      @game = $game
+      @game.turn_switcher
+      redirect "/play"
+    end 
 
 run! if app_file == $0
 
