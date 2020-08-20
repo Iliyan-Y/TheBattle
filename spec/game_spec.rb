@@ -7,7 +7,6 @@ describe Game do
 
   describe "#players" do
     it "Check if the gaim has more then 1 player" do 
-      game = Game.new("Player1", "Player2")
       expect(game.players.length).to be > 1
     end 
   end
@@ -17,6 +16,12 @@ describe Game do
       expect(player2).to receive(:get_damage)
       game.attack(player2)
       end
+  end
+
+  describe "#turn_switcher" do 
+    it "gives the role to the next player" do
+       expect(game.turn_switcher).to eq player2
+    end
   end
   
 end
