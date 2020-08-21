@@ -12,5 +12,4 @@ class Player
   def get_damage
     @hp -= DEFAULT_DMG
   end
-
 end
