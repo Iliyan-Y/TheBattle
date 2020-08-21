@@ -22,12 +22,20 @@ class Game
 
   def turn_switcher
      if @turn_to_attack == player1
-        @turn_to_attack = player2
-        @turn_to_defend = player1
+      @turn_to_attack = player2
+      @turn_to_defend = player1
      else
-        @turn_to_attack = player1
-        @turn_to_defend = player2
+      @turn_to_attack = player1
+      @turn_to_defend = player2
      end
+  end
+
+  def self.create(player1,player2)
+    @game = Game.new(player1, player2)
+  end
+
+  def self.instance
+    @game
   end
   
 end
