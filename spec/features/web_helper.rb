@@ -1,8 +1,8 @@
-def fill_n_submit 
+def fill_n_submit
   visit('/')
-  fill_in('player1', with: "Banana")
-  fill_in("player2", with: "Kiwi")
-  click_button "Submit"
+  fill_in('player1', with: 'Banana')
+  fill_in('player2', with: 'Kiwi')
+  click_button 'Go'
 end
 
 def attack_n_ok
